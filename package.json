@@ -10,6 +10,7 @@
     "start": "node server.js"
   },
   "devDependencies": {
+    "audiosearch-client-node": "1.0.0",
     "body-parser": "^1.15.2",
     "cors": "^2.8.0",
     "del": "2.2.0",
