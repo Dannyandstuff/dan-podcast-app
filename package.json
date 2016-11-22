@@ -1,15 +1,16 @@
 {
-  "name": "dan-podcast-app",
-  "version": "0.1.0",
+  "name": "dan-podcast-app-server",
+  "version": "0.0.1",
   "description": "A sample Node.js app using Express 4",
   "engines": {
-    "node": "6.9.1"
+    "node": "6.9.1",
+    "npm": "3.10.8"
   },
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
-  "devDependencies": {
+  "dependencies": {
     "audiosearch-client-node": "1.0.0",
     "body-parser": "^1.15.2",
     "cors": "^2.8.0",
