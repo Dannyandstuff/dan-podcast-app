@@ -28,7 +28,7 @@ app.use(function (req, res, next) {
 });
 
 app.get('/api/search', function(request, response) {
-    audiosearch.searchShows(request.searchTerm).then(function (results) {
+    audiosearch.searchShows(request.query.searchTerm).then(function (results) {
         response.json(results);
     })
 })
