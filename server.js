@@ -28,8 +28,8 @@ app.use(function (req, res, next) {
 });
 
 app.get('/api/search', function(request, response) {
-    audiosearch.searchShows('Harmontown').then(function (results) {
-        response.json(request);
+    audiosearch.searchShows(request.searchTerm).then(function (results) {
+        response.json(results);
     })
 })
 
