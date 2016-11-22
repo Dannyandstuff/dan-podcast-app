@@ -8,7 +8,8 @@ app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/api/search', function(request, response) {
-    audiosearch.searchShows(request.params.searchTerm).then(function (results) {
+    console.log(request);
+    audiosearch.searchShows('Harmontown').then(function (results) {
         response.json(results);
     })
 })
