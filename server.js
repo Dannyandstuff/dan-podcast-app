@@ -27,8 +27,14 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.get('/api/search', function(request, response) {
-    audiosearch.searchShows(encodeURI(request.query.searchTerm)).then(function (results) {
+app.get('/api/getShowByItunesId', function(request, response) {
+    audiosearch.getShowByItunesId(encodeURI(request.query.id)).then(function (results) {
+        response.json(results);
+    })
+})
+
+app.get('/api/getRelated', function(request, response) {
+    audiosearch.getRelated(encodeURI(request.query.id)).then(function (results) {
         response.json(results);
     })
 })
