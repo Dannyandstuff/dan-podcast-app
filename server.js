@@ -34,7 +34,7 @@ app.get('/api/getShowByItunesId', function(request, response) {
 })
 
 app.get('/api/getRelated', function(request, response) {
-    audiosearch.getRelated(encodeURI(request.query.id)).then(function (results) {
+    audiosearch.getRelated(encodeURI(request.query.id), 'shows').then(function (results) {
         response.json(results);
     })
 })
